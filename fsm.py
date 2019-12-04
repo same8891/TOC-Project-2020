@@ -21,7 +21,7 @@ class TocMachine(GraphMachine):
         reply_token = event.reply_token
         send_text_message(reply_token, " start game \nenter type b")
 
-    def on_exit_state1(self):
+    def on_exit_state1(self,event):
         print("Leaving state1")
 
     def on_enter_state2(self, event):
