@@ -82,7 +82,7 @@ machine = TocMachine(
             "dest": "d",
             "conditions": "is_going_to_d_no",
         },
-        {"trigger": "go_back", "source": "q2", "dest": "user"},
+        {"trigger": "go_back", "source": ["a","b","c","d"], "dest": "user"},
     ],
     initial="user",
     auto_transitions=False,
