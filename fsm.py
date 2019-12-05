@@ -86,6 +86,14 @@ class TocMachine(GraphMachine):
     def on_exit_q2(self,event):
         print("Leaving state2")
     def on_exit_q4(self,event):
-        print("Leaving state3")
-    def on_exit_q4(self,event):
-        print("Leaving state3")
+        print("Leaving state4")
+    def on_exit_q5(self,event):
+        print("Leaving state5")
+    def on_exit_a(self,event):
+        print("Leaving a")
+    def on_exit_b(self,event):
+        print("Leaving b")
+    def on_exit_c(self,event):
+        print("Leaving c")
+    def on_exit_d(self,event):
+        print("Leaving d")
