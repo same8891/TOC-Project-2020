@@ -14,7 +14,7 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["user", "q1", "q2","q3","q4","q5"],
+    states=["user", "q1", "q2","q3","q4","q5","a","b","c","d"],
     transitions=[
         {
             "trigger": "advance",
@@ -36,15 +36,51 @@ machine = TocMachine(
         },
         {
             "trigger": "advance",
-            "source": "q3",
-            "dest": "q2",
-            "conditions": "is_going_to_q2_yes",
+            "source": "q2",
+            "dest": "q3",
+            "conditions": "is_going_to_q3_yes",
         },
         {
             "trigger": "advance",
             "source": "q2",
-            "dest": "q3",
-            "conditions": "is_going_to_q3_no",
+            "dest": "q4",
+            "conditions": "is_going_to_q4_no",
+        },
+        {
+            "trigger": "advance",
+            "source": "q3",
+            "dest": "q4",
+            "conditions": "is_going_to_q4_yes",
+        },
+        {
+            "trigger": "advance",
+            "source": "q3",
+            "dest": "q5",
+            "conditions": "is_going_to_q5_no",
+        },
+        {
+            "trigger": "advance",
+            "source": "q4",
+            "dest": "a",
+            "conditions": "is_going_to_a_yes",
+        },
+        {
+            "trigger": "advance",
+            "source": "q4",
+            "dest": "qb",
+            "conditions": "is_going_to_b_no",
+        },
+        {
+            "trigger": "advance",
+            "source": "q5",
+            "dest": "c",
+            "conditions": "is_going_to_c_yes",
+        },
+        {
+            "trigger": "advance",
+            "source": "q5",
+            "dest": "qd",
+            "conditions": "is_going_to_qd_no",
         },
         {"trigger": "go_back", "source": "q2", "dest": "user"},
     ],
