@@ -67,7 +67,7 @@ machine = TocMachine(
         {
             "trigger": "advance",
             "source": "q4",
-            "dest": "qb",
+            "dest": "b",
             "conditions": "is_going_to_b_no",
         },
         {
@@ -79,8 +79,8 @@ machine = TocMachine(
         {
             "trigger": "advance",
             "source": "q5",
-            "dest": "qd",
-            "conditions": "is_going_to_qd_no",
+            "dest": "d",
+            "conditions": "is_going_to_d_no",
         },
         {"trigger": "go_back", "source": "q2", "dest": "user"},
     ],

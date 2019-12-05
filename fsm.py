@@ -25,6 +25,9 @@ class TocMachine(GraphMachine):
     def is_going_to_q3_no(self, event):
         text = event.message.text
         return text.lower() == "no"
+    def is_going_to_q3_yes(self, event):
+        text = event.message.text
+        return text.lower() == "yes"
     def is_going_to_q5_no(self, event):
         text = event.message.text
         return text.lower() == "no"
