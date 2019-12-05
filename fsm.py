@@ -42,11 +42,7 @@ class TocMachine(GraphMachine):
         return text.lower() == "yes"
     def is_going_to_d_no(self, event):
         text = event.message.text
-        return text.lower() == "no"
-    def on_enter_restart(self, event):
-        print("I'm entering restart")
-        reply_token = event.reply_token
-        send_text_message(reply_token, "enter start to restart")   
+        return text.lower() == "no"   
     def on_enter_q3(self, event):
         print("I'm entering state3")
         reply_token = event.reply_token
@@ -97,8 +93,6 @@ class TocMachine(GraphMachine):
         print("Leaving state4")
     def on_exit_q5(self,event):
         print("Leaving state5")
-     def on_exit_restart(self,event):
-        print("Leaving restart")
     def on_exit_a(self):
         print("Leaving a")
     def on_exit_b(self):
