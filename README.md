@@ -22,4 +22,4 @@ question 4 enter "yes" to result A , enter "no" to result B.
 question 5 enter "yes" to result C , enter "no" to result D.
 
 ## Deploy
-Setting to deploy webhooks on Heroku.
+Setting to deploy webhooks on AWS.
